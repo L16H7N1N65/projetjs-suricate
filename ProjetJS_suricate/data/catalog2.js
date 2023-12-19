@@ -25,7 +25,7 @@ var catalog = [
     },
     {
 	"name" : "chaise design",
-	"description" : "une chaise design ùais peut-être pas confortable",
+	"description" : "une chaise design mais peut-être pas confortable",
 	"image" : "images/chaisedesign.jpg",
 	"price" : "232"
     },

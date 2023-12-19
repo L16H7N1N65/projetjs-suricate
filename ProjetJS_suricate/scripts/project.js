@@ -28,7 +28,7 @@ let createShop = function () {
 }
 
 /*
-* create the div.produit element corresponding to the given product
+* create the div.produit elment corresponding to the given product
 * The created element receives the id "index-product" where index is replaced by param's value
 * @param product (product object) = the product for which the element is created
 * @param index (int) = the index of the product in catalog, used to set the id of the created element
@@ -57,7 +57,7 @@ let createProduct = function (product, index) {
 
 /* return a new element of tag 'tag' with content 'content' and class 'cssClass'
  * @param tag (string) = the type of the created element (example : "p")
- * @param content (string) = the html content of the created element (example : "bla bla")
+ * @param content (string) = the html wontent of the created element (example : "bla bla")
  * @param cssClass (string) (optional) = the value of the 'class' attribute for the created element
  */
 let createBlock = function (tag, content, cssClass) {
@@ -76,33 +76,18 @@ let createBlock = function (tag, content, cssClass) {
 * TODO : add the event handling, 
 *   /!\  in this version button and input do nothing  /!\  
 */
-<<<<<<< Updated upstream
-let createOrderControlBlock = function (index) {
-=======
 // Modify createOrderControlBlock to include event listeners for input and button LM
 let createOrderControlBlock = (index)=> {
->>>>>>> Stashed changes
 	let control = document.createElement("div");
 	control.className = "controle";
 
-	// create input quantity element
 	let input = document.createElement("input");
 	input.id = index + '-' + inputIdKey;
 	input.type = "number";
 	input.value = "0";
 
-<<<<<<< Updated upstream
-	// add input to control as its child
-	control.appendChild(input);
-	
-	// create order button
-	let button = document.createElement("button");
-	button.className = 'commander';
-	button.id = index + "-" + orderIdKey;
-	// add control to control as its child
-=======
 	// Add input event listener for quantity validation
-	input.addEventListener("input", ()=> {
+	input.addEventListener("input", function () {
 			let quantity = parseInt(input.value);
 			if (isNaN(quantity) || quantity < 0 || quantity > MAX_QTY) {
 					input.value = "0";
@@ -114,15 +99,8 @@ let createOrderControlBlock = (index)=> {
 	button.className = 'commander';
 	button.id = index + "-" + orderIdKey;
 
-// Add button click event listener
-// button.addEventListener("click", ()=> {
-// 	addToCart(index, parseInt(input.value));
-// 	input.value = "0";
-// 	updateTotal();
-// });
-
 	// Add button click event listener
-button.addEventListener("click",  ()=> {
+button.addEventListener("click", function () {
 	let quantity = parseInt(input.value);
 	if (quantity > 0) {
 			addToCart(index, quantity);
@@ -136,15 +114,11 @@ button.addEventListener("click",  ()=> {
 
 	// Append input and button to control
 	control.appendChild(input);//Added
->>>>>>> Stashed changes
 	control.appendChild(button);
-	
-	// the built control div node is returned
-	return control;
-}
 
-<<<<<<< Updated upstream
-=======
+	return control;
+};
+
 // Function to update button state based on quantity Check Again Tomorrow!
 let updateButtonState = function (button, quantity) {
 	button.disabled = quantity === 0;
@@ -209,34 +183,27 @@ let updateTotal = () =>{
 };
 
 // First point is to createFigureBlock (below LM) 
->>>>>>> Stashed changes
 
-/*
-* create and return the figure block for this product
-* see the static version of the project to know what the <figure> should be
-* @param product (product object) = the product for which the figure block is created
-*
-* TODO : write the correct code
-*/
 let createFigureBlock = function (product) {
-	return createBlock("figure", "");
-}
+	
+	let figure = document.createElement("figure");
+	
+	let image = document.createElement("img");
+	image.src = product.image;  
+	image.alt = product.name; 
 
+	// Append the image to the figure
+	figure.appendChild(image);
 
-<<<<<<< Updated upstream
-var imagejavascript = document. createElement("img");
-imagejavascript.src = "images/nounours1.jpg";
-document.body.appendChild(imagejavascript)
-=======
 	return figure;
 };
 
 // return createBlock("figure", `<img src="${product.image}">`, "lulu"); Study tonight and replicate
 
-
-// Remember to modify the input to only one number possible at time
+// let imagejavascript = document. createElement("img");
+// imagejavascript.src = "images/nounours1.jpg";
+// document.body.appendChild(imagejavascript)
 
 
 
 	
->>>>>>> Stashed changes
