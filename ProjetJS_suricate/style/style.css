@@ -128,6 +128,7 @@ button.commander {
 	background-size : cover;
 	border : solid 2px white;
 	opacity : 0.25;
+	/* background-color: rgba(0, 0, 0, 0.25) inset;; */
 }
 
 button.commander {
