@@ -65,6 +65,6 @@ These sources provided valuable insights, code snippets, and training resources 
 Conclusion
 As students tasked with creating an online store, this project enabled us to go beyond our competencies. Our journey involved overcoming challenges, learning new tools, and creating an engaging online experience for sneakers enthusiasts. Additionally, the implementation of an extensive database enhances the overall functionality of the online store, providing a robust platform for users.
 
-L16H7N1N65 & Chr1stopher Perez
+L16H7N1N65 & Chr1stopherPerez
 
 Enjoy exploring the 3D sneaker, and happy coding!
