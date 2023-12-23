@@ -33,27 +33,78 @@ let createShop = function () {
 * @param product (product object) = the product for which the element is created
 * @param index (int) = the index of the product in catalog, used to set the id of the created element
 */
+
 let createProduct = function (product, index) {
-	// build the div element for product
-	let block = document.createElement("div");
-	block.className = "produit";
-	// set the id for this product
-	block.id = index + "-" + productIdKey;
-	// build the h4 part of 'block'
-	block.appendChild(createBlock("h4", product.name));
-	
-	// // /!\ should add the figure of the product... does not work yet... /!\ 
-	block.appendChild(createFigureBlock(product));
+  // build the div element for product
+  let block = document.createElement("div");
+  block.className = "produit";
+  // set the id for this product
+  block.id = index + "-" + productIdKey;
+  // build the h4 part of 'block'
+  block.appendChild(createBlock("h4", product.name));
 
-	// // build and add the div.description part of 'block' 
-	block.appendChild(createBlock("div", product.description, "description"));
-	// // build and add the div.price part of 'block'
-	block.appendChild(createBlock("div", product.price, "prix"));
-	// build and add control div block to product element
-	block.appendChild(createOrderControlBlock(index));
-	return block;
-}
+  // build and add the figure of the product
+  let figureBlock = createFigureBlock(product);
+  block.appendChild(figureBlock);
 
+  // build and add the div.description part of 'block'
+  block.appendChild(createBlock("div", product.description, "description"));
+  // build and add the div.price part of 'block'
+  block.appendChild(createBlock("div", product.price, "prix"));
+  // build and add control div block to product element
+  block.appendChild(createOrderControlBlock(index));
+
+  // Add hover effect and eye icon only to product-0
+  if (index === 0) {
+    figureBlock.classList.add("hover-effect");
+
+    // Build the hover for our special project
+    let eyeIcon = document.createElement("img");
+    eyeIcon.src = "./eye.png";
+    eyeIcon.alt = "3D Project";
+    eyeIcon.className = "eye-icon";
+    eyeIcon.style.opacity = "0"; // Initially transparent
+    eyeIcon.style.width = "40%"; // Set the width as needed
+    eyeIcon.style.height = "40%"; // Set the height as needed
+    figureBlock.appendChild(eyeIcon);
+
+    // Toggle eye icon visibility and opacity on mouseover the image
+    figureBlock.addEventListener("mouseover", () => {
+      figureBlock.classList.add("hovered");
+      eyeIcon.style.opacity = "0.5"; // Fully visible
+    });
+
+    figureBlock.addEventListener("mouseout", () => {
+      figureBlock.classList.remove("hovered");
+      eyeIcon.style.opacity = "0"; // Transparent
+    });
+
+    // Add click event listener for launching the 3D project
+    eyeIcon.addEventListener("click", () => {
+      // Open a new window and navigate to three-index.html
+      const newWindow = window.open("./three-index.html", "_blank", "width=" + window.innerWidth / 2 + ",height=" + window.innerHeight);
+
+      // Check if the new window was successfully opened
+      if (newWindow) {
+        // Optionally, you can focus on the new window
+        newWindow.focus();
+
+        // Add a close button to the new window
+        const closeButton = newWindow.document.createElement("button");
+        closeButton.textContent = "Close";
+        closeButton.style.position = "absolute";
+        closeButton.style.top = "10px";
+        closeButton.style.right = "10px";
+        closeButton.addEventListener("click", () => newWindow.close());
+        newWindow.document.body.appendChild(closeButton);
+      } else {
+        console.error("Failed to open the new window.");
+      }
+    });
+  }
+
+  return block;
+};
 
 /* return a new element of tag 'tag' with content 'content' and class 'cssClass'
  * @param tag (string) = the type of the created element (example : "p")
@@ -203,6 +254,18 @@ let createFigureBlock = function (product) {
 // let imagejavascript = document. createElement("img");
 // imagejavascript.src = "images/nounours1.jpg";
 // document.body.appendChild(imagejavascript)
+
+
+
+
+
+// return createBlock("figure", `<img src="${product.image}">`, "lulu"); Study tonight and replicate
+
+// let imagejavascript = document. createElement("img");
+// imagejavascript.src = "images/nounours1.jpg";
+// document.body.appendChild(imagejavascript)
+
+
 
 
 
