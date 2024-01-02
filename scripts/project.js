@@ -219,10 +219,11 @@ let createOrderControlBlock = (index) => {
   input.addEventListener("input", function () {
     let quantity = parseInt(input.value);
     if (isNaN(quantity) || quantity < 0 || quantity > MAX_QTY) {
-      input.value = "0";
+      input.value = MAX_QTY.toString();  // Set to the maximum allowed quantity
     }
     updateButtonState(button, quantity);
   });
+  
 
   let button = document.createElement("button");
   button.className = "commander";
