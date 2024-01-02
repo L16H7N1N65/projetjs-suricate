@@ -4,8 +4,8 @@ var catalog = [
 		"brand" : "NIKE",
 	    "description" : "Dessus / Tige: Cuir & imitation de cuir,<br> Doublure: Textile, Semelle: Textile",
 	    "image" : "images/Supreme_x_Nike_Air_More_Uptempo_Red_1.jpg",
-		"gltf": "images/uploads_file/uploads_files.gltf", 
 	    "price" : "1629.00",
+		"gltf": "images/uploads_file/uploads_files.gltf",
 		"color" : "Varsity Red",
 		"size" : "41"
 	},
@@ -109,7 +109,7 @@ var catalog = [
 		"size" : ["38", "39", "40", "41", "42"]
 	},
 	{
-	    "name" : "NIKE ZOOM KOBE 6 PROTRO MAMBACITA",
+	    "name" : "NIKE ZOOM KOBE 6 PROTRO MAMBACITA SWEET 16",
 		"brand" : "NIKE",
 	    "description" : "Dessus / Tige: Tissu & Synthétique,<br> Doublure: Textile, Semelle de propreté: Textile",
 	    "image" : "images/Nike_Zoom_Kobe_6_Protro_Mambacita_Sweet_16_1.jpg",
@@ -172,7 +172,7 @@ var catalog = [
 		"size" : ["38", "39", "40", "41", "42"]
 	},
     {
-	    "name" : "CACTUS PLANT FLEA MARKET X SWAROSKI",
+	    "name" : "CACTUS PLANT FLEA MARKET X NIK DUNK LOW SWAROSKI",
 		"brand" : "NIKE",
 	    "description" : "Dessus / Tige: Cuir,<br> Doublure: Textile, Semelle: Textile",
 	    "image" : "images/Cactus_Plant_Flea_Market_x_Nike_Dunk_Low_Swarovski_1.jpg",
@@ -181,7 +181,7 @@ var catalog = [
 		"size" : "40"
 	},
     {
-	    "name" : "BASKETS 574 NEW BALANCE X MIU MIU",
+	    "name" : "BASKETS 574 NEW BALANCE X MIU MIU EN DENIM MARBRÉ",
 		"brand" : "NEW BALANCE",
 	    "description" : "Dessus / Tige: Denim / Effilochée,<br> Doublure: Tissu, Semelle: Gomme",
 	    "image" : "images/BASKETS_574_NEW_BALANCE_X_MIU_MIU_EN_DENIM_MARBRÉ_1.jpg",
