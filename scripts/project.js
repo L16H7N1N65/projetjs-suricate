@@ -28,7 +28,8 @@ let productElements = [];
 let cartTotal = 0;
 const searchInput = document.getElementById("filter");
 
-// function called when page is loaded, it performs initializations
+
+// fonction pour ajouter un nouveau nom & un favicon pour le site © Christopher
 let init = function () {
 document.title = "Sneakers Store";
 // Ajouter un nouveau nom pour le site
@@ -52,13 +53,13 @@ let favicon = document.createElement("link");
 favicon.rel = "icon";
 favicon.type = "image/x-icon";
 favicon.href = faviconPath;
-// Fonction pour ajouter le favicon suricate
+// Fonction pour ajouter le favicon suricate 
 
 document.head.appendChild(favicon);
 // Ajouter le favicon au <head>
 }
 
-// ETAPE 7. Réparer la fonction createShop CP
+// Réparer la fonction createShop © Christopher
 let createShop = function () {
 let searchInput = document.getElementById("filter");
 
@@ -99,7 +100,7 @@ productElement.style.display = searchAttribute.includes(searchTerm)
 * @param product (product object) = the product for which the element is created
 * @param index (int) = the index of the product in catalog, used to set the id of the created element
 */
-// ETAPE 8. Réparer la fonction createProduct
+// Réparer la fonction createProduct © Christopher
 let createProduct = function (product, index) {
 // build the div element for product
 let block = document.createElement("div");
@@ -244,7 +245,7 @@ input.type = "number";
 input.value = "0";
 
 
-// Add input event listener for quantity validation
+// Ajout d'un évément pour la quanité et géré l'opacité
 input.addEventListener("input", function () {
   let quantity = parseInt(input.value);
 
@@ -290,7 +291,7 @@ saveButton.className = "sauvegarder";
 saveButton.textContent = "Sauvegarder";
 saveButton.addEventListener("click", function () {
 saveCartToLocalStorage();
-// Création boutton Sauvegarder
+// Création boutton Sauvegarder © Christopher
 
 });
 control.appendChild(saveButton);
@@ -358,7 +359,7 @@ let addToCart = (index, quantity) => {
     cartItem.appendChild(itemName);
     cartItem.appendChild(itemQuantity);
 
-    // ETAPE 5. Création d'un bouton de suppression
+    // Création d'un bouton de suppression © Linda
     // Add a delete button to remove the item from the cart
     let deleteButton = document.createElement("button");
     deleteButton.textContent = "Supprimer";
@@ -372,7 +373,7 @@ let addToCart = (index, quantity) => {
     document.querySelector("#panier .achats").appendChild(cartItem);
   }
 
-  // Mise à jour de l'opacité du bouton après l'ajout au panier
+  // Mise à jour de l'opacité du bouton après l'ajout au panier © Christopher
   let button = document.getElementById(index + "-" + orderIdKey);
   button.style.opacity = quantity === 0 ? 0 : 0.25;
 
@@ -380,7 +381,7 @@ let addToCart = (index, quantity) => {
 };
 
 
-// Function to update the total in the cart LM
+// Function to update the total in the cart © Linda
 let updateTotal = () => {
   let cartItems = document.querySelectorAll("#panier .achat");
   let total = 0;
@@ -402,7 +403,7 @@ let updateTotal = () => {
 };
 
 
-// First point is to createFigureBlock (below LM)
+// First point is to createFigureBlock © Linda
 
 let createFigureBlock = function (product) {
 let figure = document.createElement("figure");
@@ -422,4 +423,3 @@ return figure;
 // let imagejavascript = document. createElement("img");
 // imagejavascript.src = "images/nounours1.jpg";
 // document.body.appendChild(imagejavascript)
-
