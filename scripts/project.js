@@ -5,6 +5,22 @@ const productIdKey = "product";
 const orderIdKey = "order";
 const inputIdKey = "qte";
 
+// Load cart items from local storage
+function loadCartFromLocalStorage() {
+  const cartItems = localStorage.getItem("cartItems");
+  if (cartItems) {
+    const parsedCartItems = JSON.parse(cartItems);
+
+    // Iterate through the items and add them to the cart
+    parsedCartItems.forEach((item) => {
+      addToCart(item.index, item.quantity);
+    });
+
+    // Update the total after loading the items
+    updateTotal();
+  }
+}
+
 // === global variables  ===
 // the total cost of selected products
 let total = 0;
@@ -20,7 +36,7 @@ let init = function () {
   loadCartFromLocalStorage();
 
   addFavicon(
-    "style/images/802aeb91-6118-44d5-a61e-8b6019f43f9a-removebg-preview.ico"
+"style/images/802aeb91-6118-44d5-a61e-8b6019f43f9a-removebg-preview.ico"
   );
   // Ajouter un favicon pour le site
 };
@@ -44,6 +60,12 @@ function addFavicon(faviconPath) {
 
 // ETAPE 7. Réparer la fonction createShop CP
 let createShop = function () {
+  let searchInput = document.getElementById("filter");
+
+  if (!searchInput) {
+    console.error("Error: Element with id 'filter' not found.");
+    return;
+  }
   let shop = document.getElementById("boutique");
   // Récupérer l'élément avec l'ID boutique depuis le DOM pour le mettre dans la boutique
 
@@ -67,6 +89,9 @@ let createShop = function () {
     });
   });
 };
+
+
+
 
 /*
  * create the div.produit elment corresponding to the given product
@@ -207,6 +232,9 @@ let createBlock = function (tag, content, cssClass) {
  */
 // Modify createOrderControlBlock to include event listeners for input and button LM
 let createOrderControlBlock = (index) => {
+  let controlParent = document.createElement("div");
+  controlParent.className = "controle-parent";
+
   let control = document.createElement("div");
   control.className = "controle";
 
@@ -219,11 +247,10 @@ let createOrderControlBlock = (index) => {
   input.addEventListener("input", function () {
     let quantity = parseInt(input.value);
     if (isNaN(quantity) || quantity < 0 || quantity > MAX_QTY) {
-      input.value = MAX_QTY.toString();  // Set to the maximum allowed quantity
+      input.value = "0";
     }
     updateButtonState(button, quantity);
   });
-  
 
   let button = document.createElement("button");
   button.className = "commander";
@@ -242,11 +269,43 @@ let createOrderControlBlock = (index) => {
   });
 
   // Append input and button to control
-  control.appendChild(input); //Added
+  control.appendChild(input);
   control.appendChild(button);
 
-  return control;
+  
+
+  let saveButton = document.createElement("button");
+  saveButton.className = "sauvegarder";
+  saveButton.textContent = "Sauvegarder";
+  saveButton.addEventListener("click", function () {
+    saveCartToLocalStorage();
+  // Création boutton Sauvegarder
+
+  });
+  control.appendChild(saveButton);
+  controlParent.appendChild(control);
+
+
+  return controlParent;
 };
+
+function saveCartToLocalStorage() {
+  let cartItems = [];
+
+  let cartItemsElements = document.querySelectorAll("#panier .achat");
+  cartItemsElements.forEach(function (cartItemElement) {
+    let index = cartItemElement.id.split("-")[1];
+    let quantity = parseInt(cartItemElement.querySelector(".quantite").textContent);
+    cartItems.push({ index, quantity });
+  });
+
+  // Sauvegarde dans le local Storage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  console.log("Panier sauvegardé avec succès !");
+}
+
+
 
 // Function to update button state based on quantity Check Again Tomorrow!
 let updateButtonState = function (button, quantity) {
@@ -340,8 +399,3 @@ let createFigureBlock = function (product) {
 // imagejavascript.src = "images/nounours1.jpg";
 // document.body.appendChild(imagejavascript)
 
-
-
-
-
-	
