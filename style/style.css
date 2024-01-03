@@ -8,13 +8,14 @@ margin: 1rem;
 }
 
 h1 {
-background-color : #fff;
+/* background-color : #fff; */
 text-align : center;
 color : #333333;
 padding : 10px;
 border-radius : 4px;
 width : calc(100% - 40px);
 margin : 0;
+margin-bottom: 10px;
 }
 
 /* div.produit:hover {
