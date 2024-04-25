@@ -101,7 +101,7 @@ class BuildByL16H7N1N65 {
     this._scene.add(keyLight);
 
     // Front light
-    let frontLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    let frontLight = new THREE.DirectionalLight(0xffffff, 0.9);
     frontLight.position.set(0, 20, 50);
     this._scene.add(frontLight);
 
@@ -205,3 +205,4 @@ let _APP = null;
 window.addEventListener("DOMContentLoaded", () => {
   _APP = new BuildByL16H7N1N65();
 });
+
