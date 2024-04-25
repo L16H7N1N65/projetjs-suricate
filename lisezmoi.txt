@@ -1,0 +1,60 @@
+Indiquez ici la description des fonctionnalités que vous avez ajoutées à votre script.
+
+© Christopher
+
+><  Ajout d'une fonction pour ajouter un nom et un favicon au site :
+
+    Manipulation du JS pour ajouter un nom au site.
+    Manipulation de fichiers statiques.
+    Compréhension de base de la structure d'une page web.
+
+>< Ajout d'une fonction pour formater les sommes. Séparer les milliers et centaines + ajout de symbole € :
+
+    Implémenter la fonction de formatage des sommes, notamment en ajoutant le séparateur de milliers, le séparateur de centaines, et le symbole € en JS.
+
+><  Ajout de la base de données :
+
+    Gestion du catalogue de produits.
+    Approfondissement de la base de données.
+    Ccompétences dans la modélisation des données et l'organisation de l'information.
+
+© Linda
+
+><  Three.js et Modélisation 3D :
+
+    Compréhension et mise en œuvre de Three.js pour créer un environnement 3D sur le web.
+    Chargement et manipulation de modèles 3D à l'aide de GLTFLoader.
+    Gestion des défis liés au positionnement de la caméra en fonction de la boîte englobante du modèle 3D chargé.
+    Apprentissage des outils de modélisation 3D tels que Blender et Tinkercad, démontrant une polyvalence dans l'utilisation de différents logiciels.
+
+><  Intégration Audio :
+
+    Intégration de la fonctionnalité audio dans l'application web.
+    Synchronisation de la lecture audio avec les contrôles utilisateur, en particulier le bouton Lecture/Pause.
+    Gestion des événements asynchrones et assurance de mises à jour appropriées de l'état du bouton pendant la lecture audio.
+
+><  Interaction Utilisateur et Contrôles :
+
+    Implémentation de contrôles de caméra pour l'interaction utilisateur à l'aide d'OrbitControls.
+    Compréhension et configuration des contrôles utilisateur pour le mouvement de la caméra, démontrant une compétence dans la manipulation des interactions utilisateur dans un environnement 3D.
+
+><  Intégration de la Base de Données :
+
+    Implémentation d'une base de données étendue pour un magasin en ligne.
+    Gestion des informations du catalogue de produits dans la base de données.
+    Intégration de fonctionnalités d'authentification utilisateur.
+    Gestion du traitement des commandes, indiquant une compréhension du développement backend et de la gestion de bases de données.
+
+><  Résolution de Problèmes et Adaptabilité :
+
+    Surmontée des défis rencontrés pendant le processus de développement, tels que le positionnement de la caméra et l'intégration audio.
+    Adaptation à différents outils et technologies, comme le montre la transition de Blender à Tinkercad pour la modélisation 3D.
+
+><  Compétences en Documentation et Recherche :
+
+    Référence à la documentation de diverses sources, dont Three.js, MDN Web Docs, Stack Overflow, la documentation Blender et la plateforme d'apprentissage Tinkercad.
+    Utilisation efficace de ressources externes pour obtenir des informations, des extraits de code et des matériaux de formation.
+
+><  Gestion de Projet :
+
+    Structuration du code dans un système basé sur des classes, démontrant une compréhension de l'organisation du code et de la structuration du projet.
