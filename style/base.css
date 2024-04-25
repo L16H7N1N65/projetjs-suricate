@@ -1,0 +1,12 @@
+body {
+  background-image: url('logo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(248, 243, 243);
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
