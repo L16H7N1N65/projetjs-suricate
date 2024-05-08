@@ -6,7 +6,7 @@ In the pursuit of creating an online store, I have embarked on a journey to expa
 
 ## Project Overview
 
-The project aims to revolutionize the online shopping experience by integrating immersive 3D elements. Our focal point is the showcase of the iconic Uptempo model in collaboration with Nike and Supreme, blending street style with avant-garde design. Leveraging the Three.js library, I have crafted an environment where style seamlessly intersects with the digital realm.
+The project aims to revolutionize the online shopping experience by integrating immersive 3D elements. My focal point has been the showcase of the iconic Uptempo model in collaboration with Nike and Supreme, blending street style with avant-garde design. Leveraging the Three.js library, I have crafted an environment where style seamlessly intersects with the digital realm.
 
 ## Technical Overview
 
