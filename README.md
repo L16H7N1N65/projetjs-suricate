@@ -2,11 +2,11 @@
 
 ## Introduction
 
-In the pursuit of creating an online store, we embarked on a journey to expand our skill set and delve into new technologies. As part of this endeavor, we have introduced an extensive database to enrich the functionality of the online store.
+In the pursuit of creating an online store, I have embarked on a journey to expand my skill set and delve into new technologies. As part of this endeavor, I have introduced an extensive database to enrich the functionality of the online store.
 
 ## Project Overview
 
-The project aims to revolutionize the online shopping experience by integrating immersive 3D elements. Our focal point is the showcase of the iconic Uptempo model in collaboration with Nike and Supreme, blending street style with avant-garde design. Leveraging the Three.js library, we have crafted an environment where style seamlessly intersects with the digital realm.
+The project aims to revolutionize the online shopping experience by integrating immersive 3D elements. Our focal point is the showcase of the iconic Uptempo model in collaboration with Nike and Supreme, blending street style with avant-garde design. Leveraging the Three.js library, I have crafted an environment where style seamlessly intersects with the digital realm.
 
 ## Technical Overview
 
@@ -57,7 +57,7 @@ As novice web development enthusiasts, we encountered the following challenges:
 
 ## Sources and References
 
-We owe gratitude to the following resources for their invaluable assistance throughout the development process:
+I owe gratitude to the following resources for their invaluable assistance throughout the development process:
 
 - Three.js Documentation
 - MDN Web Docs
@@ -69,9 +69,9 @@ We owe gratitude to the following resources for their invaluable assistance thro
 
 ## Conclusion
 
-Embarking on this project as students has been a journey of growth and discovery. Overcoming challenges, acquiring new skills, and crafting an engaging online experience for sneaker enthusiasts has been immensely rewarding. The integration of an extensive database further enhances the online store's functionality, providing a robust platform for users.
+Embarking on this project as a student has been a journey of growth and discovery. Overcoming challenges, acquiring new skills, and crafting an engaging online experience for sneaker enthusiasts has been immensely rewarding. The integration of an extensive database further enhances the online store's functionality, providing a robust platform for users.
 
-**Authors:** L16H7N1N65 & Chr1stopherPerez
+**Authors:** L16H7N1N65 
 
 Enjoy exploring the 3D sneaker, and happy coding!
 
